@@ -17,6 +17,7 @@
     {
       overlays.default = final: prev: {
         fx2adc = final.callPackage ./fx2adc.nix { };
+        sigrok-firmware = final.callPackage ./sigrok-firmware.nix { };
 
         pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
           (python-final: python-prev: {
@@ -37,6 +38,7 @@
         packages.default = pkgs.python3Packages.pyfx2adc;
         packages.pyfx2adc = pkgs.python3Packages.pyfx2adc;
         packages.fx2adc = pkgs.fx2adc;
+        packages.sigrok-firmware = pkgs.sigrok-firmware;
       }
     );
 }
