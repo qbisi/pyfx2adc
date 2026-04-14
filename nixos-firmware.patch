@@ -1,0 +1,12 @@
+diff --git a/src/ezusb.c b/src/ezusb.c
+index f79a222..68a8ceb 100644
+--- a/src/ezusb.c
++++ b/src/ezusb.c
+@@ -44,6 +44,7 @@ const char *fw_pathlist[] = { "",
+ 			      "../../firmware/",
+ 			       "/usr/share/fx2adc-firmware/",
+ 			       "/usr/local/share/fx2adc-firmware/",
++				   "/run/current-system/firmware/fx2adc-firmware/",
+ 			      "/usr/share/sigrok-firmware/", };
+ 
+ static void *firmware_file_load(const char *name, size_t *size, off_t max_size)

@@ -17,6 +17,8 @@ stdenv.mkDerivation {
     hash = "sha256-Gv8f5KMCE6Ws2mDK+Nt8sXiawuKYkoKWosxGLg1rECs=";
   };
 
+  patches = [ ./nixos-firmware.patch ];
+
   nativeBuildInputs = [
     cmake
     pkg-config
