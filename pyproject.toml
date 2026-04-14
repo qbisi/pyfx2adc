@@ -1,0 +1,35 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.10",
+    "pybind11>=2.12",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pyfx2adc"
+version = "0.1.0"
+description = "Python bindings for libfx2adc"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+authors = [
+    { name = "fx2adc contributors" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: C++",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+
+[project.urls]
+Homepage = "https://github.com/steve-m/fx2adc"
+
+[tool.scikit-build]
+wheel.packages = ["pyfx2adc"]
+cmake.source-dir = "."
+
